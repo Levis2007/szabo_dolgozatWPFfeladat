@@ -45,5 +45,17 @@ namespace szabo_dolgozatWPFfeladat
 
             dtgDolgozatok.ItemsSource = dolgozatok;
         }
+
+        private void dolgozat_hozzaadasa(object sender, RoutedEventArgs e)
+        {
+            Dolgozat dolgozat = new Dolgozat(tbxNev.Text, int.Parse(tbxEletkor.Text), int.Parse(tbxPontszam.Text));
+            dolgozatok.Add(dolgozat);
+
+            dtgDolgozatok.Items.Refresh();
+
+            tbxNev.Clear();
+            tbxEletkor.Clear();
+            tbxPontszam.Clear();
+        }
     }
 }
