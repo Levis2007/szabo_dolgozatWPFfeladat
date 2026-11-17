@@ -30,5 +30,9 @@
             <TextBlock Text="Pontszám:" VerticalAlignment="Center" Margin="5"/>
             <TextBox x:Name="tbxPontszam" Width="50" VerticalContentAlignment="Center" Margin="5"/>
         </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button x:Name="btnHozzaadas" Content="Hozzáadás" Width="100" Height="30" Margin="5"/>
+            <Button x:Name="btnMentes" Content="Mentés" Width="100" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>
