@@ -20,5 +20,15 @@
                 <DataGridTextColumn Header="Pontszam" Binding="{Binding Pontszam}" Width="60" />
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="Név:" VerticalAlignment="Center" Margin="5" />
+            <TextBox x:Name="tbxNev" Width="150" VerticalContentAlignment="Center" Margin="5"/>
+
+            <TextBlock Text="Életkor:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="tbxEletkor" Width="50" VerticalContentAlignment="Center" Margin="5"/>
+
+            <TextBlock Text="Pontszám:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="tbxPontszam" Width="50" VerticalContentAlignment="Center" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>
