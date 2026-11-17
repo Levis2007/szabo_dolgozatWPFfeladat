@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static szabo_dolgozatWPFfeladat.MainWindow;
 
 namespace szabo_dolgozatWPFfeladat
 {
@@ -41,6 +42,8 @@ namespace szabo_dolgozatWPFfeladat
             dolgozatok.Add(new Dolgozat("Horváth Zsolt", 16, 65));
             dolgozatok.Add(new Dolgozat("Molnár Réka", 18, 89));
             dolgozatok.Add(new Dolgozat("Lakatos Dániel", 17, 72));
+
+            dtgDolgozatok.ItemsSource = dolgozatok;
         }
     }
 }
