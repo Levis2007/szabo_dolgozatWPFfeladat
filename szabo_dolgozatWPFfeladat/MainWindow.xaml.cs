@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Windows;
+using System.IO;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -56,6 +57,15 @@ namespace szabo_dolgozatWPFfeladat
             tbxNev.Clear();
             tbxEletkor.Clear();
             tbxPontszam.Clear();
+        }
+
+        private void dolgozatok_fileba_mentese(object sender, RoutedEventArgs e)
+        {
+            var rekordok = dolgozatok.Select(x => $"{x.Nev};{x.Eletkor};{x.Pontszam}").ToList();
+
+            File.WriteAllLines("dolgozatok.txt", rekordok);
+
+            MessageBox.Show("Sikeres Mentés!");
         }
     }
 }
